@@ -161,7 +161,7 @@ playwright.config.ts
 
 ## 👨‍💻 Author
 
-QA Automation Engineer specialized in:
+Mohammad ABUHASIRAH specialized in:
 
 * Playwright
 * Test Architecture
@@ -169,6 +169,7 @@ QA Automation Engineer specialized in:
 * Agile & QA Strategy
 
 ---
+
 
 ## ⭐ Notes
 
