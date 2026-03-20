@@ -5,8 +5,7 @@ export class ProductListingPage {
 
   async verifyPageLoaded() {
     await expect(this.page.getByText('Swag Labs')).toBeVisible();
-    await expect(this.page.getByTestId('title')).toContainText('Products');
-  }
+    await expect(this.page.locator('[data-test="title"]')).toContainText('Products');  }
 
   async checkHomePageLogo(itemName: string) {
     await expect(this.page.getByText(/swag labs/i)).toBeVisible();
