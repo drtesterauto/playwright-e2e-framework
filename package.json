@@ -2,13 +2,19 @@
   "name": "pright",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "bdd": "cucumber-js --require-module ts-node/register --require steps/**/*.ts --format json:reports/cucumber-report.json features/**/*.feature"
+    ,"report": "node report.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
     "@playwright/test": "^1.58.2",
-    "@types/node": "^25.5.0"
+    "@types/node": "^25.5.0",
+    "multiple-cucumber-html-reporter": "^3.10.0",
+    "ts-node": "^10.9.2"
   }
 }

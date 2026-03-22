@@ -1,0 +1,124 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "cart;add-product-to-cart",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Add product to cart",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is logged in",
+            "match": {
+              "location": "steps/loginSteps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7242180833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "the user adds a product to the cart",
+            "match": {
+              "location": "steps/loginSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44772334
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the cart should contain that product",
+            "match": {
+              "location": "steps/loginSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 547939833
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "cart",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Cart",
+    "tags": [],
+    "uri": "features/cart.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;user-logs-in-successfully",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User logs in successfully",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps/loginSteps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3428449042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "the user logs in with valid credentials",
+            "match": {
+              "location": "steps/loginSteps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 151800624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the user should see the product page",
+            "match": {
+              "location": "steps/loginSteps.ts:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 127086208
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "features/login.feature"
+  }
+]
