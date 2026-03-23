@@ -1,176 +1,107 @@
-# 🧪 Playwright E2E Automation Framework (POM + Fixtures)
+# 🧪 Playwright Test Automation Framework (POM)
 
-## 📌 Overview
+This project demonstrates a **clean and scalable test automation framework** using:
 
-This project is an end-to-end (E2E) test automation framework built using **Playwright** with:
+- 🎭 Playwright  
+- 🟦 TypeScript  
+- 🧱 Page Object Model (POM)  
 
-* ✅ Page Object Model (POM)
-* ✅ Custom Fixtures (for reusable setup)
-* ✅ Clean and scalable architecture
-* ✅ Data-driven testing
+It focuses on building a **maintainable UI automation structure** following best practices.
 
-The goal is to demonstrate **maintainable, readable, and production-ready test automation**.
+---
+
+## 📁 Project Structure
+
+```
+pright/
+
+├── tests/
+│   ├── pages/               # Page Object Model classes
+│   ├── constants/           # Test data
+│   └── specs/               # Test files
+
+├── playwright.config.ts     # Playwright configuration
+├── tsconfig.json            # TypeScript configuration
+└── package.json
+```
 
 ---
 
 ## 🚀 Features
 
-* 🔹 Modern Playwright test runner
-* 🔹 Page Object Model (POM) design
-* 🔹 Custom fixtures for login handling
-* 🔹 Reusable test data (constants)
-* 🔹 Clear and business-readable test flows
-* 🔹 Scalable structure for real-world projects
+- End-to-end UI testing with Playwright  
+- Page Object Model (POM) design pattern  
+- TypeScript support  
+- Clean and maintainable architecture  
 
 ---
 
-## 📂 Project Structure
+## ▶️ Getting Started
+
+### 1. Install dependencies
 
 ```
-project-root/
-│
-├── tests/
-│   └── e2e.spec.ts
-│
-├── pages/
-│   ├── LoginPage.ts
-│   ├── ProductListingPage.ts
-│   ├── CartPage.ts
-│   └── CheckoutPage.ts
-│
-├── fixtures/
-│   └── testFixtures.ts
-│
-├── constants/
-│   ├── userdata.ts
-│   └── checkoutData.ts
-│
-├── playwright.config.ts
-└── README.md
-```
-
----
-
-## 🧱 Architecture
-
-### 🔹 Page Object Model (POM)
-
-Each page contains:
-
-* Selectors
-* Actions
-* Assertions
-
-Example:
-
-* `ProductListingPage` → product actions
-* `CartPage` → cart interactions
-* `CheckoutPage` → checkout flow
-
----
-
-### 🔹 Fixtures
-
-Custom fixture:
-
-```
-loggedInPage
-```
-
-Handles:
-
-* Navigation to the app
-* User login
-
-👉 This removes repeated setup from tests and keeps them clean.
-
----
-
-## 🧪 Example Test Flow
-
-```
-User logs in
-→ Adds product to cart
-→ Navigates to cart
-→ Proceeds to checkout
-→ Completes purchase
-→ Verifies success
-```
-
----
-
-## ⚙️ Installation
-
-```bash
 npm install
+```
+
+### 2. Install Playwright browsers
+
+```
 npx playwright install
 ```
 
 ---
 
-## ▶️ Run Tests
+## 🧪 Run Tests
 
-```bash
+```
 npx playwright test
 ```
 
-Run specific file:
+---
 
-```bash
-npx playwright test tests/e2e.spec.ts
+## 🧠 Framework Architecture
+
 ```
-
-Run in headed mode:
-
-```bash
-npx playwright test --headed
+Test Spec
+   ↓
+Page Object Model
+   ↓
+Playwright Actions
+   ↓
+Browser Execution
 ```
 
 ---
 
-## 📊 Parallel Execution
+## 🌿 Branch Strategy
 
-Playwright runs tests in parallel by default.
+- **main** → Playwright framework using Page Object Model  
+- **bdd-framework** → Advanced version with Cucumber (BDD) and HTML reporting  
 
-You can configure workers in:
-
-```
-playwright.config.ts
-```
+🚀 For the advanced version, check the `bdd-framework` branch.
 
 ---
 
-## 🧠 Best Practices Applied
+## 🚀 Future Improvements
 
-* ✔️ Separation of concerns (POM)
-* ✔️ Reusable test setup (fixtures)
-* ✔️ Clean and readable test scenarios
-* ✔️ No hardcoded values (data-driven)
-* ✔️ Scalable structure
-
----
-
-## 🔜 Next Improvements
-
-* 🔹 BDD integration (Cucumber + feature files)
-* 🔹 CI/CD with GitHub Actions
-* 🔹 Reporting (Allure / HTML reports)
-* 🔹 Cross-browser testing enhancements
+- Add reporting  
+- Integrate CI/CD (GitHub Actions)  
+- Cross-browser testing  
 
 ---
 
 ## 👨‍💻 Author
 
-Mohammad ABUHASIRAH specialized in:
+Mohammad  
 
-* Playwright
-* Test Architecture
-* E2E Automation
-* Agile & QA Strategy
+QA Engineer | Playwright | Test Automation  
 
 ---
 
-
 ## ⭐ Notes
 
-This project is designed to demonstrate **real-world QA automation practices** suitable for freelance and enterprise environments.
+This project demonstrates **clean automation design using Page Object Model**, focusing on:
+- Maintainability  
+- Reusability  
+- Scalable structure  
