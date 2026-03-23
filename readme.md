@@ -1,176 +1,171 @@
-# 🧪 Playwright E2E Automation Framework (POM + Fixtures)
+# 🧪 Playwright Test Automation Framework (POM + BDD)
 
-## 📌 Overview
+This project demonstrates a **professional QA automation framework** built using:
 
-This project is an end-to-end (E2E) test automation framework built using **Playwright** with:
+- 🎭 Playwright  
+- 🥒 Cucumber (BDD)  
+- 🟦 TypeScript  
+- 📊 HTML Reporting  
 
-* ✅ Page Object Model (POM)
-* ✅ Custom Fixtures (for reusable setup)
-* ✅ Clean and scalable architecture
-* ✅ Data-driven testing
+It showcases an advanced automation approach combining **Page Object Model (POM)** and **Behavior-Driven Development (BDD)**.
 
-The goal is to demonstrate **maintainable, readable, and production-ready test automation**.
+---
+
+## 📁 Project Structure
+
+```
+pright/
+
+├── features/                # BDD feature files (Gherkin)
+├── steps/                   # Step definitions (Cucumber)
+
+├── tests/
+│   ├── pages/               # Page Object Model classes
+│   ├── constants/           # Test data
+
+├── reports/                 # JSON + HTML reports (generated)
+├── types/                   # TypeScript custom declarations
+
+├── report.ts                # HTML report generator
+├── tsconfig.json            # TypeScript configuration
+├── playwright.config.ts     # Playwright configuration
+└── package.json
+```
 
 ---
 
 ## 🚀 Features
 
-* 🔹 Modern Playwright test runner
-* 🔹 Page Object Model (POM) design
-* 🔹 Custom fixtures for login handling
-* 🔹 Reusable test data (constants)
-* 🔹 Clear and business-readable test flows
-* 🔹 Scalable structure for real-world projects
+- End-to-end UI testing with Playwright  
+- Page Object Model (POM) design pattern  
+- BDD with Cucumber (Gherkin syntax)  
+- JSON reporting  
+- HTML report generation  
+- TypeScript support  
+- Clean and scalable architecture  
 
 ---
 
-## 📂 Project Structure
+## ▶️ Getting Started
+
+### 1. Install dependencies
 
 ```
-project-root/
-│
-├── tests/
-│   └── e2e.spec.ts
-│
-├── pages/
-│   ├── LoginPage.ts
-│   ├── ProductListingPage.ts
-│   ├── CartPage.ts
-│   └── CheckoutPage.ts
-│
-├── fixtures/
-│   └── testFixtures.ts
-│
-├── constants/
-│   ├── userdata.ts
-│   └── checkoutData.ts
-│
-├── playwright.config.ts
-└── README.md
-```
-
----
-
-## 🧱 Architecture
-
-### 🔹 Page Object Model (POM)
-
-Each page contains:
-
-* Selectors
-* Actions
-* Assertions
-
-Example:
-
-* `ProductListingPage` → product actions
-* `CartPage` → cart interactions
-* `CheckoutPage` → checkout flow
-
----
-
-### 🔹 Fixtures
-
-Custom fixture:
-
-```
-loggedInPage
-```
-
-Handles:
-
-* Navigation to the app
-* User login
-
-👉 This removes repeated setup from tests and keeps them clean.
-
----
-
-## 🧪 Example Test Flow
-
-```
-User logs in
-→ Adds product to cart
-→ Navigates to cart
-→ Proceeds to checkout
-→ Completes purchase
-→ Verifies success
-```
-
----
-
-## ⚙️ Installation
-
-```bash
 npm install
+```
+
+### 2. Install Playwright browsers
+
+```
 npx playwright install
 ```
 
 ---
 
-## ▶️ Run Tests
+## 🧪 Run Tests (BDD)
 
-```bash
-npx playwright test
+```
+npm run bdd
 ```
 
-Run specific file:
+This will:
+- Execute feature files  
+- Generate JSON report  
 
-```bash
-npx playwright test tests/e2e.spec.ts
+---
+
+## 📊 Generate HTML Report
+
+```
+npm run report
 ```
 
-Run in headed mode:
+Then open:
 
-```bash
-npx playwright test --headed
+```
+reports/html-report/index.html
 ```
 
 ---
 
-## 📊 Parallel Execution
-
-Playwright runs tests in parallel by default.
-
-You can configure workers in:
+## 🔁 Run Everything (Tests + Report)
 
 ```
-playwright.config.ts
+npm run bdd:report
 ```
 
 ---
 
-## 🧠 Best Practices Applied
+## 🧠 Framework Architecture
 
-* ✔️ Separation of concerns (POM)
-* ✔️ Reusable test setup (fixtures)
-* ✔️ Clean and readable test scenarios
-* ✔️ No hardcoded values (data-driven)
-* ✔️ Scalable structure
+```
+Feature File (Gherkin)
+        ↓
+Step Definitions (Cucumber)
+        ↓
+Page Object Model (Playwright)
+        ↓
+Browser Execution
+        ↓
+JSON Report
+        ↓
+HTML Report
+```
 
 ---
 
-## 🔜 Next Improvements
+## ⚙️ TypeScript Configuration
 
-* 🔹 BDD integration (Cucumber + feature files)
-* 🔹 CI/CD with GitHub Actions
-* 🔹 Reporting (Allure / HTML reports)
-* 🔹 Cross-browser testing enhancements
+TypeScript is configured via `tsconfig.json` to:
+- Resolve modules correctly  
+- Support ES imports  
+- Enable execution using `ts-node`  
+
+---
+
+## ⚠️ Handling External Libraries (TypeScript)
+
+Some libraries do not provide TypeScript definitions.
+
+To handle this, a custom declaration file is used:
+
+```
+types/multiple-cucumber-html-reporter.d.ts
+```
+
+With:
+
+```
+declare module 'multiple-cucumber-html-reporter';
+```
+
+---
+
+## 📸 HTML Report Preview
+![alt text](image-1.png)
+---
+
+## 🚀 Future Improvements
+
+- Add screenshots on failure  
+- Integrate CI/CD (GitHub Actions)  
+- Multi-browser execution  
+- Environment-based configuration  
 
 ---
 
 ## 👨‍💻 Author
 
-Mohammad ABUHASIRAH specialized in:
+Mohammad  
 
-* Playwright
-* Test Architecture
-* E2E Automation
-* Agile & QA Strategy
+QA Engineer | Playwright | BDD | Test Automation  
 
 ---
 
-
 ## ⭐ Notes
 
-This project is designed to demonstrate **real-world QA automation practices** suitable for freelance and enterprise environments.
+This project demonstrates **real-world QA engineering practices**, including:
+- Scalable test architecture  
+- Separation of concerns  
+- Maintainability  
+- Professional reporting  
